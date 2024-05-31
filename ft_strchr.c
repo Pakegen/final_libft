@@ -6,7 +6,7 @@
 /*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 18:57:27 by quenalla          #+#    #+#             */
-/*   Updated: 2024/05/30 19:47:27 by quenalla         ###   ########.fr       */
+/*   Updated: 2024/05/31 14:03:57 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && c != *s)
+	while (*s != '\0' && (char)c != *s)
 		s++;
-	if (*s == c)
+	if (*s == (char)c)
 		return ((char *) s);
-	return (0);
+	return (NULL);
 }
