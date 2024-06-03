@@ -6,7 +6,7 @@
 /*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 10:51:53 by qacjl             #+#    #+#             */
-/*   Updated: 2024/05/30 18:18:31 by quenalla         ###   ########.fr       */
+/*   Updated: 2024/06/03 14:54:25 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 int				ft_isalpha(int c);
 
