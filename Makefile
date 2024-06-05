@@ -41,18 +41,24 @@ SRC = ft_atoi.c\
       ft_strnstr.c\
       ft_strlcat.c\
 
-SRC_BONUS = ft_lstnew.c\
-	    ft_lstadd_front.c\
-	    ft_lstsize.c\
-	    ft_lstlast.c\
-	    ft_lstadd_back.c\
-
+SRC_BONUS = ft_lstnew_bonus.c\
+	    ft_lstadd_front_bonus.c\
+	    ft_lstsize_bonus.c\
+	    ft_lstlast_bonus.c\
+	    ft_lstadd_back_bonus.c\
+	    ft_lstdelone_bonus.c\
+	    ft_lstclear_bonus.c\
+	    ft_lstiter_bonus.c\
+	    ft_lstmap_bonus.c\
 
 OBJ = $(SRC:.c=.o)
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
+
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ) $(OBJ_BONUS)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
@@ -61,12 +67,11 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-:.c=.o)
 .PHONY: all clean fclean re
