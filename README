@@ -218,3 +218,8 @@ le probleme est par exemple E, F, G
 sont present a la fois dans la source et la destination ce qui constitue un chevauchement
 car ils sont remplace par C D E J
 mais E F G ont ete ecrase par C D E ce qui va creer un probleme
+
+			FT_LSTNEW
+DESCRIPTION :
+
+CREE UNE NOUVELLE CHAINE AVEC UN NOUVEAU ELEMENT 
