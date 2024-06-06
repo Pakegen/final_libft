@@ -6,7 +6,7 @@
 /*   By: quenalla <quenalla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 13:38:47 by qacjl             #+#    #+#             */
-/*   Updated: 2024/06/05 16:56:37 by quenalla         ###   ########.fr       */
+/*   Updated: 2024/06/06 17:39:21 by quenalla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			k;
 	char			*str;
 
+	if (!s)
+		return (ft_strdup(""));
 	if (start > ft_strlen(s))
 		str = malloc(1);
 	else if (len > (ft_strlen(s) - start))
@@ -31,10 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	while (s[i])
 	{
 		if (i >= start && k < len)
-		{
-			str[k] = (char)s[i];
-			k++;
-		}
+			str[k++] = (char)s[i];
 		i++;
 	}
 	str[k] = '\0';
